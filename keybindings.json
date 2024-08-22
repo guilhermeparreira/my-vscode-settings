@@ -51,6 +51,31 @@
         "key": "ctrl+v",
         "command": "workbench.action.terminal.paste",
         "when": "terminalFocus"
+    },
+    // Run all below/above cells/chunks in jupyter/uarto
+    {
+        "key": "ctrl+shift+up",
+        "command": "notebook.cell.executeCellsAbove",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+shift+up",
+        "command": "quarto.runCellsAbove",
+        "when": "editorTextFocus && quarto.hasActiveNotebook"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "notebook.cell.executeCellAndBelow",
+        "when": "notebookEditorFocused"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "quarto.runCellAndBelow",
+        "when": "editorTextFocus && quarto.hasActiveNotebook"
+    },
+    // Run Kernel in jupyter
+    {
+        "key": "ctrl+shift+r",
+        "command": "jupyter.restartkernel"
     }
-
 ]
