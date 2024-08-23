@@ -51,6 +51,12 @@
         "key": "ctrl+v",
         "command": "workbench.action.terminal.paste",
         "when": "terminalFocus"
-    }
+    },
+    // to render quarto documents
+    {
+        "key": "ctrl+shift+k",
+        "command": "quarto.preview",
+        "when": "editorTextFocus && editorLangId == 'quarto'"
+    },
 
 ]
