@@ -110,5 +110,10 @@
         "key": "ctrl+shift+l",
         "command": "editor.action.transformToLowercase",
         "when": "editorTextFocus"
+    },
+    // Execute all notebook cells - Run all command
+    {
+        "key": "ctrl+shift+k",
+        "command": "notebook.execute"
     }
 ]
