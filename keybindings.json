@@ -83,5 +83,37 @@
         "key": "ctrl+shift+k",
         "command": "quarto.preview",
         "when": "editorTextFocus && editorLangId == 'quarto'"
+    },
+        //  To paste with indentation - https://marketplace.visualstudio.com/items?itemName=Rubymaniac.vscode-paste-and-indent
+    {
+        "key": "Ctrl+v",
+        "command": "pasteAndIndent.action",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "Ctrl+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "!editorTextFocus"
+    },
+    {
+        "key": "Ctrl+shift+v",
+        "command": "editor.action.clipboardPasteAction",
+        "when": "editorTextFocus && !editorReadonly"
+    },
+    // Upper and Lower Cases words
+    {
+        "key": "ctrl+shift+u",
+        "command": "editor.action.transformToUppercase",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "editor.action.transformToLowercase",
+        "when": "editorTextFocus"
+    },
+    // Execute all notebook cells - Run all command
+    {
+        "key": "ctrl+shift+k",
+        "command": "notebook.execute"
     }
 ]
