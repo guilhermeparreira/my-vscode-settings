@@ -84,7 +84,7 @@
         "command": "quarto.preview",
         "when": "editorTextFocus && editorLangId == 'quarto'"
     },
-        //  To paste with indentation - https://marketplace.visualstudio.com/items?itemName=Rubymaniac.vscode-paste-and-indent
+    //  To paste with indentation - https://marketplace.visualstudio.com/items?itemName=Rubymaniac.vscode-paste-and-indent
     {
         "key": "Ctrl+v",
         "command": "pasteAndIndent.action",
@@ -114,6 +114,11 @@
     // Execute all notebook cells - Run all command
     {
         "key": "ctrl+shift+k",
-        "command": "notebook.execute"
+        "command": "python.execInTerminal-icon"
+    },
+    {
+        "key": "ctrl+shift+k",
+        "command": "jupyter.restartkernelandrunallcells",
+        "when": "isWorkspaceTrusted && jupyter.interactive.canRestartNotebookKernel || isWorkspaceTrusted && jupyter.notebookeditor.canrestartNotebookkernel && notebookKernel =~ /^ms-toolsai.jupyter\\//"
     }
 ]
