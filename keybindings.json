@@ -114,7 +114,8 @@
     // Execute all notebook cells - Run all command
     {
         "key": "ctrl+shift+k",
-        "command": "python.execInTerminal-icon"
+        "command": "python.execInTerminal-icon",
+        "when": "editorLangId == 'python'"
     },
     {
         "key": "ctrl+shift+k",
