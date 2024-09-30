@@ -120,5 +120,15 @@
         "key": "ctrl+shift+k",
         "command": "jupyter.restartkernelandrunallcells",
         "when": "isWorkspaceTrusted && jupyter.interactive.canRestartNotebookKernel || isWorkspaceTrusted && jupyter.notebookeditor.canrestartNotebookkernel && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     }
 ]
