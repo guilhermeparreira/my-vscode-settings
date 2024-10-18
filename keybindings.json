@@ -101,6 +101,9 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     // Upper and Lower Cases words
+    // run the following for the next key work
+    // gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
+    
     {
         "key": "ctrl+shift+u",
         "command": "editor.action.transformToUppercase",
