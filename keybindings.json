@@ -101,18 +101,15 @@
         "when": "editorTextFocus && !editorReadonly"
     },
     // Upper and Lower Cases words
-    // run the following for the next key work
-    // gsettings set org.gnome.desktop.interface gtk-key-theme "Emacs"
-    
     {
-        "key": "ctrl+shift+u",
+        "key": "ctrl+alt+u",
         "command": "editor.action.transformToUppercase",
-        "when": "editorTextFocus"
+        "when": "textInputFocus"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "ctrl+alt+l",
         "command": "editor.action.transformToLowercase",
-        "when": "editorTextFocus"
+        "when": "textInputFocus"
     },
     // Execute all notebook cells - Run all command
     {
