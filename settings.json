@@ -75,7 +75,7 @@
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "git.enableSmartCommit": true,
-  "git.mergeEditor": true,
   "git.autofetch": true,
   "git.path": "/usr/bin/git",
+  "git.mergeEditor": true
 }
