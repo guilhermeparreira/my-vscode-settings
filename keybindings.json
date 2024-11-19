@@ -141,5 +141,42 @@
         "key": "f5",
         "command": "-workbench.action.debug.start",
         "when": "debuggersAvailable && debugState == 'inactive'"
-    }
+    },
+    // Jump to next blank line
+    {
+        "key": "ctrl+up", // whatever keybinding you want
+        "command": "cursorMove",
+        "args": {
+            "to": "prevBlankLine",
+            "select": false // false is the default if omitted
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "nextBlankLine",
+            "select": false // false is the default if omitted
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+up", // whatever keybinding you want
+        "command": "cursorMove",
+        "args": {
+            "to": "prevBlankLine",
+            "select": true // false is the default if omitted
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+shift+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "nextBlankLine",
+            "select": true // false is the default if omitted
+        },
+        "when": "editorTextFocus"
+    },
 ]
