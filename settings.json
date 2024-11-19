@@ -31,7 +31,9 @@
   "diffEditor.hideUnchangedRegions.enabled": true,
   // Language words
   "cSpell.enabled": true,
-  "cSpell.enableFiletypes": ["!python"],
+  "cSpell.enableFiletypes": [
+    "!python"
+  ],
   "cSpell.language": "en,pt-BR",
   "cSpell.userWords": [
     "AESA",
@@ -72,4 +74,8 @@
   "interactiveWindow.executeWithShiftEnter": true,
   "workbench.iconTheme": "material-icon-theme",
   "terminal.integrated.enableMultiLinePasteWarning": false,
+  "git.enableSmartCommit": true,
+  "git.mergeEditor": true,
+  "git.autofetch": true,
+  "git.path": "/usr/bin/git",
 }

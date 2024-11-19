@@ -102,14 +102,14 @@
     },
     // Upper and Lower Cases words
     {
-        "key": "ctrl+shift+u",
+        "key": "ctrl+alt+u",
         "command": "editor.action.transformToUppercase",
-        "when": "editorTextFocus"
+        "when": "textInputFocus"
     },
     {
-        "key": "ctrl+shift+l",
+        "key": "ctrl+alt+l",
         "command": "editor.action.transformToLowercase",
-        "when": "editorTextFocus"
+        "when": "textInputFocus"
     },
     // Execute all notebook cells - Run all command
     {
@@ -121,5 +121,25 @@
         "key": "ctrl+shift+k",
         "command": "jupyter.restartkernelandrunallcells",
         "when": "isWorkspaceTrusted && jupyter.interactive.canRestartNotebookKernel || isWorkspaceTrusted && jupyter.notebookeditor.canrestartNotebookkernel && notebookKernel =~ /^ms-toolsai.jupyter\\//"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+shift+v",
+        "command": "-workbench.action.terminal.paste",
+        "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "f5",
+        "command": "workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'  && editorFocus"
+    },
+    {
+        "key": "f5",
+        "command": "-workbench.action.debug.start",
+        "when": "debuggersAvailable && debugState == 'inactive'"
     }
 ]
