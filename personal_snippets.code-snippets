@@ -1,0 +1,54 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Load YAML File": {
+				"prefix": "load_yaml",
+				"body": [
+								"import yaml",
+								"with open(${1:path_to_file}, 'r') as file:",
+								"    ${2:ext_params} = yaml.safe_load(file)"
+				],
+				"description": "Load a YAML file into a Python variable."
+	},
+	"Save YAML File": {
+				"prefix": "save_yaml",
+				"body": [
+								"import yaml",
+								"with open(${1:path_to_file}, 'w') as file:",
+								"    yaml.safe_dump(${2:data}, file)"
+				],
+				"description": "Save a Python variable to a YAML file."
+	},
+	"Load JSON File": {
+				"prefix": "load_json",
+				"body": [
+								"import json",
+								"with open(${1:path_to_file}, 'r') as file:",
+								"    ${2:data} = json.load(file)"
+				],
+				"description": "Load a JSON file into a Python variable."
+	},
+	"Save JSON File": {
+				"prefix": "save_json",
+				"body": [
+								"import json",
+								"with open(${1:path_to_file}, 'w') as file:",
+								"    json.dump(${2:data}, file, indent=${3:4})"
+				],
+				"description": "Save a Python variable to a JSON file."
+	}
+}
