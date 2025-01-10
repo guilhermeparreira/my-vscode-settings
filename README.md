@@ -11,13 +11,13 @@ cd ~
 # You need to remove the previous file before
 rm ~/.config/Code/User/settings.json
 rm ~/.config/Code/User/keybindings.json
-rm ~/.config/Code/User/personal_snippets.code-snippets
+rm ~/.config/Code/User/snippets/personal_snippets.code-snippets
 cd Documents
 git clone https://github.com/guilhermeparreira/my-vscode-settings.git
 cd my-vscode-settings/
 ln -s ~/Documents/my-vscode-settings/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s ~/Documents/my-vscode-settings/settings.json ~/.config/Code/User/settings.json
-ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/Code/User/personal_snippets.code-snippets
+ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/Code/User/snippets/personal_snippets.code-snippets
 ```
 
 This will, if a change occurs in the file, you need to push to the repository and pull the update in another PC.
