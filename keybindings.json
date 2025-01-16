@@ -179,4 +179,15 @@
         },
         "when": "editorTextFocus"
     },
+    {
+        "key": "ctrl+pageup",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+pagedown",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus"
+    }
+
 ]

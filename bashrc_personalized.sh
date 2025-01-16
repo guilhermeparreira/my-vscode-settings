@@ -7,5 +7,5 @@ parse_git_info() {
     [ -n "$(git status --porcelain 2>/dev/null)" ] && changes="*" || changes=""
     echo " $repo $(tput setaf 3)$branch$(tput sgr0) $(tput setaf 1)$changes$(tput sgr0)"
 }
-PS1="\[\e[32m\]\u\[\e[0m\]\[\e[34m\]\w\[\e[0m\]\$(parse_git_info)\n\$ "
+PS1="\[\e[32m\] \u\[\e[0m\]\[\e[34m\] \w\[\e[0m\] \$(parse_git_info)\n\$ "
 source .bashrc
