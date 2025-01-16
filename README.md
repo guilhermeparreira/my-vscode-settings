@@ -1,6 +1,9 @@
-# my-vscode-settings
+# my-personal-settings
 
-This repository stores all my personal vscode preferences. I use it to have both shortcuts in my personal and professional laptops.
+
+This repository stores all my personal preferences. I use it to have both shortcuts in my personal and professional laptops.
+
+## vs-code
 
 Both PCs cloned these repositories and have a symbolic link from the repo to the User Settings in Vscode.
 
@@ -21,3 +24,7 @@ ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/C
 ```
 
 This will, if a change occurs in the file, you need to push to the repository and pull the update in another PC.
+
+## Bash
+
+Include the content of `bashrc_personalized.sh` into `bash.sh` in the correct spot
