@@ -79,7 +79,7 @@
   "remote.SSH.serverInstallPath": {
     "10.0.1.23": "/mnt/data/.vscode-server"
   },
-  // Terminal - Terminal settings to VsCode terminal setting
+  // Terminal - Terminal settings applies to VsCode terminal
   "terminal.integrated.defaultProfile.linux": "bash", // Ou "zsh", "fish", conforme seu terminal padrão
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.profiles.linux": {
