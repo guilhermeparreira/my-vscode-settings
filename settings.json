@@ -1,6 +1,5 @@
 {
   "security.workspace.trust.untrustedFiles": "open",
-  "files.autoSave": "afterDelay",
   "explorer.confirmPasteNative": false,
   "workbench.colorTheme": "One Dark Modern",
   "explorer.confirmDragAndDrop": false,
@@ -86,5 +85,6 @@
     "bash": {
       "path": "/bin/bash"
     },
-  }
+  },
+  "debug.onTaskErrors": "showErrors"
 }
