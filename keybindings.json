@@ -38,9 +38,10 @@
     },
     {
         "key": "ctrl+/",
-        "command": "-editor.action.commentLine",
+        "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
+    
     // ctrl+c and +v in terminal
     {
         "key": "ctrl+c",
@@ -188,6 +189,37 @@
         "key": "ctrl+pagedown",
         "command": "workbench.action.terminal.focusPreviousPane",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+r",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Start radian",
+        "when": "editorLangId == r || editorLangId == rmd"
+    },
+    // For RMarkdown
+    {
+        "key": "ctrl+shift+m",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": " %>% "
+        },
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+        "key": "alt+-",
+        "command": "editor.action.insertSnippet",
+        "args": {
+            "snippet": " <- "
+        },
+        "when": "editorTextFocus && editorLangId == 'rmd'"
+    },
+    {
+      "key": "ctrl+alt+i",  // Replace with your preferred shortcut
+      "command": "editor.action.insertSnippet",
+      "when": "editorTextFocus && editorLangId == 'rmd'",
+      "args": {
+        "snippet": "```{r, results='asis'}\n$0\n```"
+      }
     }
 
 ]
