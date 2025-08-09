@@ -1,6 +1,5 @@
 # my-personal-settings
 
-
 This repository stores all my personal preferences. I use it to have both shortcuts in my personal and professional laptops.
 
 ## vs-code
@@ -27,4 +26,4 @@ This will, if a change occurs in the file, you need to push to the repository an
 
 ## Bash
 
-Include the content of `bashrc_personalized.sh` into `bash.sh` in the correct spot
+Include the content of `bashrc_personalized.sh` into `bash.sh` in the correct spot.

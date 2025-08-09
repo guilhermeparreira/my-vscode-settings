@@ -38,18 +38,23 @@
     "AESA",
     "anatel",
     "Ariba",
+    "autofetch",
     "bacen",
     "backoffice",
+    "charliermarsh",
     "chosed",
     "clusterizar",
     "clusterization",
     "cofins",
     "covariável",
+    "cweijan",
     "Dani",
     "datafactory",
+    "datanovia",
     "Docstrings",
     "furukawa",
     "Homologation",
+    "incentivized",
     "ipynb",
     "JARBIS",
     "jupyter",
@@ -58,6 +63,7 @@
     "Kazu",
     "kedro",
     "KPI's",
+    "MAPE",
     "openpyxl",
     "OPGW",
     "pipenv",
@@ -65,10 +71,13 @@
     "preprod",
     "Pyenv",
     "radicade",
+    "rsrs",
     "salesforce",
     "sheetname",
     "sheetnames",
-    "SQOL"
+    "sofle",
+    "SQOL",
+    "yreal"
   ],
   "interactiveWindow.executeWithShiftEnter": true,
   "git.enableSmartCommit": true,
@@ -83,8 +92,8 @@
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.profiles.linux": {
     "bash": {
-      "path": "/bin/bash",
-    },
+      "path": "/bin/bash"
+    }
   },
   "debug.onTaskErrors": "showErrors",
   "files.autoSave": "afterDelay",
@@ -129,5 +138,8 @@
   "makefile.configureOnOpen": true,
   "projectManager.git.baseFolders": [
     "/home/guilherme/Documents"
-  ]
+  ],
+  "python.defaultInterpreterPath": "/bin/python3",
+  "quarto.path": "/usr/local/bin/quarto",
+  "python.analysis.typeCheckingMode": "strict"
 }
