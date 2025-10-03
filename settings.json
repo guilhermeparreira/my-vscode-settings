@@ -20,22 +20,14 @@
     "r.term.option": "radian",
     "diffEditor.ignoreTrimWhitespace": false,
     "rewrap.doubleSentenceSpacing": true,
-    // Always send code to the currently active R terminal (Do not spawn new terminal every time)
     "r.alwaysUseActiveTerminal": true,
-    // Session Watcher — allows executing code into radian nicely
     "r.sessionWatcher": true,
     "r.source.focus": "editor",
-    // Optional: For a cleaner radian experience (no telemetry)
     "r.bracketedPaste": true,
-    // Point VS Code’s R extension to your Conda-env R: - I have not followed tips from 4. TopVSCode Extensions for R Programming
     "r.rterm.linux": "/home/guilherme/miniconda3/envs/r-datasci-env/bin/Radian",
     // "r.rterm.linux": "conda run -n r-datasci-env && radian",
-    // Tell the R extension where to find Rscript (used for running code):
     "r.rpath.linux": "/home/guilherme/miniconda3/envs/r-datasci-env/bin/R",
-    // Disable extra options that radian doesn't recognize
     "r.rterm.option": [],
-    // Use the languageserver for enhanced editing features:
-    // Optional: enable Language Server Protocol (LSP) debug mode
     "r.lsp.debug": true,
     "r.lsp.diagnostics": true,
     "r.plot.useHttpgd": true
@@ -62,17 +54,22 @@
       "source.fixAll": "always",
       "source.organizeImports": "always"
     },
+    "editor.suggest.showWords": true,
+    "editor.suggest.showSnippets": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.inlineSuggest.enable": true,
+    "editor.quickSuggestionsDelay": 0,
     "diffEditor.ignoreTrimWhitespace": false
   },
   "python.languageServer": "Pylance",
+  "python.analysis.typeCheckingMode": "standard",
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.completeFunctionParens": true,
   "python.analysis.autoImportUserSymbols": true,
-  "python.analysis.typeCheckingMode": "standard",
-  "python.analysis.indexing": true,
+  "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.indexing": true,
   "python.defaultInterpreterPath": "/bin/python3",
   // Jupyter
   "[jupyter]": {
