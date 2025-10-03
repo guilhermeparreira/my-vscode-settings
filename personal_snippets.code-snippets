@@ -16,39 +16,39 @@
 	// 	"description": "Log output to console"
 	// }
 	"Load YAML File": {
-				"prefix": "load_yaml",
-				"body": [
-								"import yaml",
-								"with open(${1:path_to_file}, 'r') as file:",
-								"    ${2:ext_params} = yaml.safe_load(file)"
-				],
-				"description": "Load a YAML file into a Python variable."
+		"prefix": "load_yaml",
+		"body": [
+			"import yaml",
+			"with open(${1:path_to_file}, 'r') as file:",
+			"    ${2:ext_params} = yaml.safe_load(file, indent=4, ensure_ascii=False)"
+		],
+		"description": "Load a YAML file into a Python variable."
 	},
 	"Save YAML File": {
-				"prefix": "save_yaml",
-				"body": [
-								"import yaml",
-								"with open(${1:path_to_file}, 'w') as file:",
-								"    yaml.safe_dump(${2:data}, file)"
-				],
-				"description": "Save a Python variable to a YAML file."
+		"prefix": "save_yaml",
+		"body": [
+			"import yaml",
+			"with open(${1:path_to_file}, 'w', encoding='utf-8') as file:",
+			"    yaml.safe_dump(${2:data}, file, indent=4, ensure_ascii=False)"
+		],
+		"description": "Save a Python variable to a YAML file."
 	},
 	"Load JSON File": {
-				"prefix": "load_json",
-				"body": [
-								"import json",
-								"with open(${1:path_to_file}, 'r') as file:",
-								"    ${2:data} = json.load(file)"
-				],
-				"description": "Load a JSON file into a Python variable."
+		"prefix": "load_json",
+		"body": [
+			"import json",
+			"with open(${1:path_to_file}, 'r', encoding='utf-8') as file:",
+			"    ${2:data} = json.load(file)"
+		],
+		"description": "Load a JSON file into a Python variable."
 	},
 	"Save JSON File": {
-				"prefix": "save_json",
-				"body": [
-								"import json",
-								"with open(${1:path_to_file}, 'w') as file:",
-								"    json.dump(${2:data}, file, indent=${3:4})"
-				],
-				"description": "Save a Python variable to a JSON file."
+		"prefix": "save_json",
+		"body": [
+			"import json",
+			"with open(${1:path_to_file}, 'w', encoding='utf-8') as file:",
+			"    json.dump(${2:data}, file, indent=${3:4}, ensure_ascii=False)"
+		],
+		"description": "Save a Python variable to a JSON file."
 	}
 }
