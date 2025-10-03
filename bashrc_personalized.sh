@@ -1,5 +1,6 @@
 cd ~
 vim .bashrc
+# Put it after if [ -n "$force_color_prompt" ]; then
 parse_git_info() {
     git rev-parse --is-inside-work-tree &>/dev/null || return
     repo=$(basename "$(git rev-parse --show-toplevel 2>/dev/null)")
@@ -7,5 +8,5 @@ parse_git_info() {
     [ -n "$(git status --porcelain 2>/dev/null)" ] && changes="*" || changes=""
     echo " $repo $(tput setaf 3)$branch$(tput sgr0) $(tput setaf 1)$changes$(tput sgr0)"
 }
-PS1="\[\e[32m\] \u\[\e[0m\]\[\e[34m\] \w\[\e[0m\] \$(parse_git_info)\n\$ "
+PS1="\[\e[32m\] \u\[\e[0m\]\[\e[34m\] \w\[\e[0m\] \$(parse_git_info)\n\$ " # put it after the last PSI =
 source .bashrc
