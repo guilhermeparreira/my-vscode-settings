@@ -41,7 +41,6 @@
         "command": "editor.action.commentLine",
         "when": "editorTextFocus && !editorReadonly"
     },
-    
     // ctrl+c and +v in terminal
     {
         "key": "ctrl+c",
@@ -200,7 +199,7 @@
         "command": "editor.action.triggerParameterHints",
         "when": "editorHasSignatureHelpProvider && editorTextFocus"
     },
-    // keybindings for R scripts. 
+    // keybindings for R scripts.
     {
         "key": "Ctrl+Shift+m",
         "command": "type",
@@ -226,14 +225,6 @@
         },
         "when": "editorTextFocus && editorLangId == rmd"
     },
-    {
-        "key": "Alt+-",
-        "command": "type",
-        "args": {
-            "text": " <- "
-        },
-        "when": "editorTextFocus && editorLangId == rmd"
-    },
     // keybindings for R terminal (radian included)
     {
         "key": "Ctrl+Shift+m",
@@ -245,19 +236,26 @@
     },
     {
         "key": "Alt+-",
+        "command": "type",
+        "args": {
+            "text": " <- "
+        },
+        "when": "editorTextFocus && editorLangId == rmd"
+    },
+    {
+        "key": "Alt+-",
         "command": "workbench.action.terminal.sendSequence",
         "args": {
             "text": " <- "
         },
         "when": "terminalFocus"
     },
-
     {
-    "key": "ctrl+alt+i",  // Replace with your preferred shortcut
-    "command": "editor.action.insertSnippet",
-    "when": "editorTextFocus && editorLangId == 'rmd'",
-    "args": {
-      "snippet": "```{r, results='asis'}\n$0\n```"
+        "key": "ctrl+alt+i", // Replace with your preferred shortcut
+        "command": "editor.action.insertSnippet",
+        "when": "editorTextFocus && editorLangId == 'rmd'",
+        "args": {
+            "snippet": "```{r, results='asis'}\n$0\n```"
+        }
     }
-}
 ]
