@@ -55,6 +55,9 @@
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": true,
+    "editor.tabCompletion": "on",
     "editor.codeActionsOnSave": {
       "source.fixAll": "always",
       "source.organizeImports": "always"
@@ -106,7 +109,8 @@
     "*.copilotmd": "vscode.markdown.preview.editor",
     "*.csv": "default",
     "{git,gitlens}:/**/*.{md,csv,svg}": "default",
-    "*.xlsx": "cweijan.officeViewer"
+    "*.xlsx": "cweijan.officeViewer",
+    "*.md": "default"
   },
   "workbench.editor.empty.hint": "hidden",
   "workbench.editorLargeFileConfirmation": 100,
@@ -178,11 +182,11 @@
     "**/.mypy_cache": true,
     "**/.ruff_cache": true
   },
-  ""
   "files.autoSave": "afterDelay",
   // ==========================
   // Miscellanious
   // ==========================
+  "markdown.preview.openMarkdownLinks": "inEditor",
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
   "makefile.configureOnOpen": true
