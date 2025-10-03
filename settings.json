@@ -40,7 +40,6 @@
     "r.lsp.diagnostics": true,
     "r.plot.useHttpgd": true
   },
-
   "[rmd]": {
     "editor.defaultFormatter": "REditorSupport.r",
     "editor.formatOnSave": true
@@ -52,7 +51,6 @@
     "renv.lock": "json"
   },
   "quarto.path": "/usr/local/bin/quarto",
-
   // Python
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
@@ -67,64 +65,32 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "python.analysis.autoImportUserSymbols":true,
+  "python.analysis.autoImportUserSymbols": true,
   "python.analysis.typeCheckingMode": "standard",
   "python.analysis.indexing": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.defaultInterpreterPath": "/bin/python3",
-  "python."
-
   // Jupyter
   "[jupyter]": {
-      "editor.defaultFormatter": "charliermarsh.ruff"
-    },
-    "jupyter.interactiveWindow.creationMode": "perFile",
-    "jupyter.askForKernelRestart": false,
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "jupyter.interactiveWindow.creationMode": "perFile",
+  "jupyter.askForKernelRestart": false,
   "notebook.lineNumbers": "on",
   "notebook.diff.ignoreMetadata": true,
   "notebook.diff.ignoreOutputs": true,
-
   // Ruff
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
-
   // GIT
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.mergeEditor": true,
   "git.autofetch": true,
   "git.openRepositoryInParentFolders": "never",
-
-  // cSpell - Language words //
-  "cSpell.ignorePaths": [
-    "package-lock.json",
-    "node_modules",
-    "vscode-extension",
-    ".git/{info,lfs,logs,refs,objects}/**",
-    ".git/{index,*refs,*HEAD}",
-    ".vscode",
-    ".vscode-insiders",
-    "**/requirements.txt",
-    "**/requirements*.txt",
-    "**/.gitignore/**"
-  ],
-  "cSpell.enabled": true,
-  "cSpell.languageSettings": [
-    {
-      "languageId": "markdown",
-      "ignoreRegExpList": [
-        "/\\b[A-Z_][A-Z0-9_]*\\b/g",
-        "/```[\\s\\S]*?```/g",
-        "/`[^`]*`/g"
-      ]
-    }
-  ],
-  "cSpell.language": "en,pt-BR",
-  "cSpell.userWords": ["AESA","anatel","Ariba","autofetch","bacen","backoffice","bookdown","charliermarsh","chosed","clusterizar","clusterization","cofins","covariável","cweijan","Dani","datafactory","datanovia","Docstrings","furukawa","Homologation","incentivized","ipynb","JARBIS","jupyter","KAMS","Kanban","Kazu","kedro","KPI's","MAPE","openpyxl","OPGW","pipenv","preprocess","preprod","Pyenv","radicade","rsrs","salesforce","sheetname","sheetnames","sofle","SQOL","tesseract","yreal"],
-
+  "cSpell.configFile": "~/Documents/my-vscode-settings/cspell.config.json",
   "interactiveWindow.executeWithShiftEnter": true,
-
   // Terminal
   "terminal.integrated.defaultProfile.linux": "bash", // Ou "zsh", "fish", conforme seu terminal padrão
   // "terminal.integrated.splitCwd": "workspaceRoot",
@@ -135,7 +101,6 @@
     }
   },
   "terminal.integrated.fontFamily": "monospace",
-
   // WorkBench
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
@@ -148,7 +113,6 @@
   "workbench.colorCustomizations": {},
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Modern",
-
   // Extension Project Manager
   "projectManager.git.baseFolders": [
     "/home/guilherme/Documents",
@@ -159,7 +123,6 @@
       "workspace"
     ]
   },
-
   // RAINBOW INDENT
   "indentRainbow.indicatorStyle": "light",
   "indentRainbow.lightIndicatorStyleLineWidth": 1,
@@ -174,7 +137,6 @@
   "path-intellisense.autoTriggerNextSuggestion": false,
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
-
   // ==========================
   // QUALITY OF LIFE ----------
   // ==========================
@@ -193,11 +155,18 @@
   },
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggest.showSnippets": true,
-  "editor.inlineSuggest.enabled": false,
+  "editor.inlineSuggest.enabled": true,
   "editor.formatOnType": true,
   "editor.tabCompletion": "on",
-  "editor.suggestSelection": "first",
-
+  // "editor.suggestSelection": "first",
+  "editor.suggest.showWords": true,
+  "editor.quickSuggestionsDelay": 0,
+  // Make sure JSON validation is enabled
+  "json.validate.enable": true,
+  "json.schemas": [],
+  "[json]": {
+    "editor.suggest.insertMode": "replace"
+  },
   // ==========================
   // OPTIONAL NICE TO HAVES
   // ==========================
@@ -209,12 +178,11 @@
     "**/.mypy_cache": true,
     "**/.ruff_cache": true
   },
+  ""
   "files.autoSave": "afterDelay",
-
   // ==========================
   // Miscellanious
   // ==========================
-
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
   "makefile.configureOnOpen": true
