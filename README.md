@@ -24,6 +24,8 @@ ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/C
 
 This will, if a change occurs in the file, you need to push to the repository and pull the update in another PC.
 
+Don't forget to install [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file).
+
 ## Positron
 
 Same idea as vs-code, but a different editor:
