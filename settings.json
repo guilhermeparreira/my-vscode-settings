@@ -48,7 +48,7 @@
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
-  "python.analysis.inlayHints.variableTypes": true,
+  "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": true,
   "python.analysis.indexing": true,
   "python.defaultInterpreterPath": "/bin/python3",
@@ -126,10 +126,21 @@
     "rgba(79,236,236,0.3)"
   ],
   // Path Intellisense
-  // "path-intellisense.autoSlashAfterDirectory": true,
-  "path-intellisense.autoTriggerNextSuggestion": false,
+  "path-intellisense.autoSlashAfterDirectory": true,
+  "path-intellisense.autoTriggerNextSuggestion": true,
+  "path-intellisense.extensionOnImport": true,
+  "path-intellisense.showHiddenFiles": true,
+  "path-intellisense.absolutePathToWorkspace": false,
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.sonar/**": true,
+    "**/.devcontainer/**": true,
+    "**/.github/**": true,
+    "**/public/**": true, // adding this solved the slowdown
+  },
   // ==========================
   // QUALITY OF LIFE ----------
   // ==========================
@@ -146,12 +157,18 @@
     "comments": false,
     "strings": true
   },
-  "editor.suggest.snippetsPreventQuickSuggestions": false,
-  "editor.suggest.showSnippets": true,
+  "editor.wordBasedSuggestions": "off", //turn it off for path-intellisense work
   "editor.inlineSuggest.enabled": true,
   "editor.tabCompletion": "on",
   // "editor.suggestSelection": "first",
+  "editor.suggest.snippetsPreventQuickSuggestions": false,
+  "editor.suggest.showSnippets": true,
+  "editor.suggest.showKeywords": true,
+  "editor.suggest.localityBonus": true,
   "editor.suggest.showWords": true,
+  "editor.suggest.showFiles": true, // ← Path IntelliSense
+  "editor.suggest.showFolders": true, // ← Path IntelliSense
+  "editor.suggestSelection": "recentlyUsed",
   "editor.quickSuggestionsDelay": 0,
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
@@ -181,5 +198,5 @@
   "markdown.preview.openMarkdownLinks": "inEditor",
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
-  "makefile.configureOnOpen": true
+  "makefile.configureOnOpen": true,
 }
