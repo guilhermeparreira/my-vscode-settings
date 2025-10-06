@@ -10,15 +10,11 @@
     // "editor.defaultFormatter": "Posit.air-vscode",
     // https: //www.datanovia.com/books/r-in-vscode/introduction-to-r-programming-in-vscode.html
     "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?",
-    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "source.organizeImports": "always",
       "source.fixAll.lintr": "always"
     },
     "r.lintr.enabled": true,
     "r.term.option": "radian",
-    "diffEditor.ignoreTrimWhitespace": false,
     "rewrap.doubleSentenceSpacing": true,
     "r.alwaysUseActiveTerminal": true,
     "r.sessionWatcher": true,
@@ -46,26 +42,11 @@
   // Python
   "[python]": {
     "editor.defaultFormatter": "charliermarsh.ruff",
-    "editor.formatOnSave": true,
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    "editor.tabCompletion": "on",
-    "editor.codeActionsOnSave": {
-      "source.fixAll": "always",
-      "source.organizeImports": "always"
-    },
-    "editor.suggest.showWords": true,
-    "editor.suggest.showSnippets": true,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.inlineSuggest.enable": true,
-    "editor.quickSuggestionsDelay": 0,
-    "diffEditor.ignoreTrimWhitespace": false
   },
   "python.languageServer": "Pylance",
   "python.analysis.typeCheckingMode": "standard",
   "python.analysis.diagnosticMode": "workspace",
   "python.analysis.autoImportCompletions": true,
-  "python.analysis.autoImportUserSymbols": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": true,
   "python.analysis.inlayHints.functionReturnTypes": true,
@@ -84,11 +65,22 @@
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
   // GIT
-  "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.mergeEditor": true,
   "git.autofetch": true,
-  "git.openRepositoryInParentFolders": "never",
+  "git.autofetchPeriod": 300, // every 5 minutes
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.mergeEditor": true,
+  "git.openRepositoryInParentFolders": "always",
+  "git.ignoreLimitWarning": true,
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  // ✨ Inline blame for quick context (who touched that line?)
+  "gitlens.currentLine.enabled": true,
+  "gitlens.hovers.currentLine.over": "line",
+  "gitlens.codeLens.enabled": false, // optional — keeps editor clean
+  // 💬 Better blame display
+  "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
+  "gitlens.defaultDateStyle": "absolute",
   "cSpell.configFile": "~/Documents/my-vscode-settings/cspell.config.json",
   "interactiveWindow.executeWithShiftEnter": true,
   // Terminal
@@ -144,11 +136,11 @@
   "editor.parameterHints.enabled": true, // It does not work
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
-  "diffEditor.hideUnchangedRegions.enabled": true,
   "editor.quickSuggestions": {
     "other": true,
     "comments": false,
@@ -157,11 +149,14 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggest.showSnippets": true,
   "editor.inlineSuggest.enabled": true,
-  "editor.formatOnType": true,
   "editor.tabCompletion": "on",
   // "editor.suggestSelection": "first",
   "editor.suggest.showWords": true,
   "editor.quickSuggestionsDelay": 0,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always",
+    "source.organizeImports": "always"
+  },
   // Make sure JSON validation is enabled
   "json.validate.enable": true,
   "json.schemas": [],
