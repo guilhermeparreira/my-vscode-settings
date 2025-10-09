@@ -1,0 +1,30 @@
+{
+    // Disable other formatters to avoid conflicts
+    "editor.formatOnSave": true,
+    // Use Ruff as the default formatter for Python files
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit",
+            "source.organizeImports": "explicit"
+        }
+    },
+    // Formatter for notebook cells
+    "[jupyter]": {
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    // Enable format on save for notebooks
+    "notebook.formatOnSave.enabled": true,
+    "python.analysis.extraPaths": [
+        "./src"
+    ],
+    // https: //github.com/astral-sh/ruff-vscode/issues/133#issuecomment-1455085053 // It avoids duplicated messages from Pylance and Ruff
+    "python.analysis.ignore": [
+        "*"
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:conda",
+    "python-envs.defaultPackageManager": "ms-python.python:conda",
+    "python-envs.pythonProjects": [],
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true
+}

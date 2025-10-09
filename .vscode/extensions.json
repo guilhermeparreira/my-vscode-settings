@@ -1,0 +1,23 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-python.debugger",
+        "ms-toolsai.jupyter",
+        "charliermarsh.ruff",
+        "mechatroner.rainbow-csv",
+        "njpwerner.autodocstring",
+        "tamasfe.even-better-toml",
+        "pkief.material-icon-theme",
+        "rubymaniac.vscode-paste-and-indent",
+        "cweijan.vscode-office",
+        "yzhang.markdown-all-in-one",
+        "christian-kohler.path-intellisense",
+        "alefragnani.project-manager",
+        "oderwat.indent-rainbow",
+        "eamodio.gitlens",
+    ],
+    "unwantedRecommendations": [
+        "ms-pyright.pyright", // It comes with pylance
+    ]
+}
