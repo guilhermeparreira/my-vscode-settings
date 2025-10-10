@@ -167,6 +167,11 @@
     "**/.pytest_cache/**": true,
     "**/.ruff_cache/**": true,
     "**/.mypy_cache/**": true,
+    "**/figures/**": true,
+    "**/logs/**": true,
+    "**/checkpoints/**": true,
+    "**/*.csv": true,
+    "**/*.parquet": true,
     "**/data/02_intermediate/**": true,
     "**/data/04_feature/**": true,
     "**/data/05_model_input/**": true,
@@ -176,15 +181,21 @@
     "**/data/09_production/**": true,
     "**/data/09_save_experiments/**": true,
     "**/data/10_model_output/**": true,
-    "**/figures/**": true,
-    "**/logs/**": true,
-    "**/checkpoints/**": true,
-    "**/*.csv": true,
-    "**/*.parquet": true
+    // "!**/data/01_raw/**": true,  // ← Add this!
+
   },
   // Exclude
   "search.exclude": {
-    "**/data/**": true,
+    "**/data/02_intermediate/**": true,
+    "**/data/04_feature/**": true,
+    "**/data/05_model_input/**": true,
+    "**/data/06_models/**": true,
+    "**/data/07_model_output/**": true,
+    "**/data/08_reporting/**": true,
+    "**/data/09_production/**": true,
+    "**/data/09_save_experiments/**": true,
+    "**/data/10_model_output/**": true,
+    // "!**/data/01_raw/**": true,  // ← Add this!
     "**/figures/**": true,
     "**/.git/**": true
   },
@@ -249,6 +260,7 @@
     "**/.ruff_cache": true,
     "**/.vscode": true,
     "**/figures": true,
+    // "!**/data/01_raw/**": true,  // ← Add this!
   },
   "files.autoSave": "afterDelay",
   // ==========================
