@@ -27,6 +27,15 @@ This will, if a change occurs in the file, you need to push to the repository an
 Don't forget to install [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file).
 Then [fzf](https://github.com/junegunn/fzf) through homebrew.
 Then [nerdfont](https://www.nerdfonts.com/font-downloads) and [starship](https://starship.rs/).
+Then [eza](https://github.com/eza-community/eza). Apply setup:
+
+```sh
+alias ls='eza --color=always --icons=always --group-directories-first'
+alias ll='eza -l --color=always --icons=always --group-directories-first'
+alias la='eza -la --color=always --icons=always --group-directories-first'
+```
+
+to `~/.bashrc`. Or a very [advanced setup](https://gist.github.com/AppleBoiy/04a249b6f64fd0fe1744aff759a0563b).
 
 ## Positron
 
