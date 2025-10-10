@@ -51,8 +51,13 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": false,
-  "python.analysis.indexing": false, //it may make the code slow, so false
-  "python.analysis.functionReturnTypes": true,
+  "python.analysis.indexing": true, //it may make the code slow, so false
+  "python.analysis.exclude": [
+    "**/site-packages/**",
+    "**/__pycache__/**",
+    "**/.venv/**"
+  ],
+  "python.analysis.functionReturnTypes": false,
   "python.analysis.diagnosticSeverityOverrides": {
     "reportUnusedVariable": "warning",
     "reportUnusedImport": "warning",
@@ -103,6 +108,7 @@
     }
   },
   "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.gpuAcceleration": "on",
   // WorkBench
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
@@ -218,7 +224,7 @@
   "editor.suggest.showFiles": true, // ← Path IntelliSense
   "editor.suggest.showFolders": true, // ← Path IntelliSense
   "editor.suggestSelection": "recentlyUsed",
-  "editor.quickSuggestionsDelay": 10,
+  "editor.quickSuggestionsDelay": 0,
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
     "source.organizeImports": "always",
