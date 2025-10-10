@@ -50,7 +50,7 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": false,
-  "python.analysis.inlayHints.functionReturnTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": false,
   "python.analysis.indexing": false, //it may make the code slow, so false
   "python.analysis.functionReturnTypes": true,
   "python.analysis.diagnosticSeverityOverrides": {
@@ -74,8 +74,8 @@
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
   // GIT
-  "git.autorefresh": false,
-  "git.autofetch": true,
+  "git.autorefresh": true,
+  "git.autofetch": false,
   "git.autofetchPeriod": 300, // every 5 minutes
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
