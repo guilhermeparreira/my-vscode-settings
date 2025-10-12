@@ -50,18 +50,20 @@
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": false,
-  "python.analysis.inlayHints.functionReturnTypes": true,
-  "python.analysis.indexing": false, //it may make the code slow, so false
-  "python.analysis.functionReturnTypes": true,
+  "python.analysis.inlayHints.functionReturnTypes": false,
+  "python.analysis.indexing": true, //it may make the code slow, so false
+  "python.analysis.exclude": [
+    "**/site-packages/**",
+    "**/__pycache__/**",
+    "**/.venv/**"
+  ],
+  "python.analysis.functionReturnTypes": false,
   "python.analysis.diagnosticSeverityOverrides": {
     "reportUnusedVariable": "warning",
     "reportUnusedImport": "warning",
     "reportDeprecated": "warning",
-    "reportAssertAlwaysTrue": "warning"
+    "reportAssertAlwaysTrue": "warning",
   },
-  "python.analysis.exclude": ["**/__pycache__", //this is from pyright. See https://github.com/microsoft/pyright/blob/main/docs/configuration.md
-  "**/.venv",
-  "**/venv"],
   "python.defaultInterpreterPath": "/bin/python3",
   // Jupyter
   "[jupyter]": {
@@ -77,8 +79,8 @@
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
   // GIT
-  "git.autorefresh": false,
-  "git.autofetch": true,
+  "git.autorefresh": true,
+  "git.autofetch": false,
   "git.autofetchPeriod": 300, // every 5 minutes
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
@@ -165,6 +167,11 @@
     "**/.pytest_cache/**": true,
     "**/.ruff_cache/**": true,
     "**/.mypy_cache/**": true,
+    "**/figures/**": true,
+    "**/logs/**": true,
+    "**/checkpoints/**": true,
+    "**/*.csv": true,
+    "**/*.parquet": true,
     "**/data/02_intermediate/**": true,
     "**/data/04_feature/**": true,
     "**/data/05_model_input/**": true,
@@ -174,21 +181,20 @@
     "**/data/09_production/**": true,
     "**/data/09_save_experiments/**": true,
     "**/data/10_model_output/**": true,
-    "**/figures/**": true,
-    "**/logs/**": true,
-    "**/checkpoints/**": true,
-    "**/*.csv": true,
-    "**/*.parquet": true
+    // "!**/data/01_raw/**": true,  // ← Add this!
   },
-  // This controls what VS Code ignores when searching (Ctrl+Shift+F).
+  // Exclude
   "search.exclude": {
-    "**/__pycache__": true,
-    "**/.venv": true,
-    "**/venv": true,
-    "**/.mypy_cache": true,
-    "**/.pytest_cache": true,
-    "**/.ruff_cache": true,
-    "**/data/**": true,
+    "**/data/02_intermediate/**": true,
+    "**/data/04_feature/**": true,
+    "**/data/05_model_input/**": true,
+    "**/data/06_models/**": true,
+    "**/data/07_model_output/**": true,
+    "**/data/08_reporting/**": true,
+    "**/data/09_production/**": true,
+    "**/data/09_save_experiments/**": true,
+    "**/data/10_model_output/**": true,
+    // "!**/data/01_raw/**": true,  // ← Add this!
     "**/figures/**": true,
     "**/.git/**": true
   },
@@ -205,12 +211,11 @@
   "editor.semanticTokenColorCustomizations": {
     "enabled": true
   },
-  "editor.parameterHints.enabled": true, // for performance
+  "editor.parameterHints.enabled": true, // It does not work
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
-  "editor.minimap.enabled": false, // removes minimap from right side - performace
-  // "editor.minimap.scale": 3,
+  "editor.minimap.enabled": false,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -231,7 +236,7 @@
   "editor.suggest.showFiles": true, // ← Path IntelliSense
   "editor.suggest.showFolders": true, // ← Path IntelliSense
   "editor.suggestSelection": "recentlyUsed",
-  "editor.quickSuggestionsDelay": 10,
+  "editor.quickSuggestionsDelay": 0,
   "editor.codeActionsOnSave": {
     "source.fixAll": "always",
     "source.organizeImports": "always",
