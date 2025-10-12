@@ -52,7 +52,7 @@
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": false,
   "python.analysis.indexing": true, //it may make the code slow, so false
-  "python.analysis.exclude": [
+  "python.analysis.exclude": [ // this is pyright https://github.com/microsoft/pyright/blob/main/docs/configuration.md
     "**/site-packages/**",
     "**/__pycache__/**",
     "**/.venv/**"
