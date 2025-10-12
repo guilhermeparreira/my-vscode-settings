@@ -57,8 +57,11 @@
     "reportUnusedVariable": "warning",
     "reportUnusedImport": "warning",
     "reportDeprecated": "warning",
-    "reportAssertAlwaysTrue": "warning",
+    "reportAssertAlwaysTrue": "warning"
   },
+  "python.analysis.exclude": ["**/__pycache__", //this is from pyright. See https://github.com/microsoft/pyright/blob/main/docs/configuration.md
+  "**/.venv",
+  "**/venv"],
   "python.defaultInterpreterPath": "/bin/python3",
   // Jupyter
   "[jupyter]": {
@@ -146,6 +149,7 @@
   // ==========================
   // Performance ----------
   // ==========================
+  // Stops VS Code from monitoring them for changes (performance boost)
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
@@ -176,8 +180,14 @@
     "**/*.csv": true,
     "**/*.parquet": true
   },
-  // Exclude
+  // This controls what VS Code ignores when searching (Ctrl+Shift+F).
   "search.exclude": {
+    "**/__pycache__": true,
+    "**/.venv": true,
+    "**/venv": true,
+    "**/.mypy_cache": true,
+    "**/.pytest_cache": true,
+    "**/.ruff_cache": true,
     "**/data/**": true,
     "**/figures/**": true,
     "**/.git/**": true
@@ -186,18 +196,21 @@
   "telemetry.telemetryLevel": "off",
   "remote.autoForwardPorts": false,
   "remote.downloadExtensionsLocally": true,
+  "breadcrumbs.enabled": false, // this are the symbols below the final name that show the structure
   // ==========================
   // QUALITY OF LIFE ----------
   // ==========================
+  "editor.codeLens": false, // for performance
   "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
     "enabled": true
   },
-  "editor.parameterHints.enabled": true, // It does not work
+  "editor.parameterHints.enabled": true, // for performance
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": false, // removes minimap from right side - performace
+  // "editor.minimap.scale": 3,
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
   "editor.fontSize": 14,
@@ -236,12 +249,17 @@
   // ==========================
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
+  // This controls what VS Code won’t show in the Explorer sidebar.
   "files.exclude": {
     "**/__pycache__": true,
     "**/.pytest_cache": true,
     "**/.mypy_cache": true,
     "**/.ruff_cache": true,
-    "**/.vscode": true,
+    "**/.ipynb_checkpoints": true,
+    "**/.venv": true,
+    "**/venv": true,
+    "**/env": true,
+    "**/.vscode": false,
     "**/figures": true,
   },
   "files.autoSave": "afterDelay",
@@ -252,4 +270,5 @@
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
   "makefile.configureOnOpen": true,
+  "jupyter.disableJupyterAutoStart": true, //performance
 }
