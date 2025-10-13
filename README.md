@@ -14,12 +14,14 @@ cd ~
 rm ~/.config/Code/User/settings.json
 rm ~/.config/Code/User/keybindings.json
 rm ~/.config/Code/User/snippets/personal_snippets.code-snippets
+rm ~/.config/starship.toml
 cd Documents
 git clone https://github.com/guilhermeparreira/my-vscode-settings.git
 cd my-vscode-settings/
 ln -s ~/Documents/my-vscode-settings/keybindings.json ~/.config/Code/User/keybindings.json
 ln -s ~/Documents/my-vscode-settings/settings.json ~/.config/Code/User/settings.json
 ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/Code/User/snippets/personal_snippets.code-snippets
+ln -s ~/Documents/my-vscode-settings/starship.toml ~/.config/starship.toml
 ```
 
 This will, if a change occurs in the file, you need to push to the repository and pull the update in another PC.
@@ -57,10 +59,6 @@ cd my-vscode-settings/
 ln -s ~/Documents/my-vscode-settings/keybindings.json ~/.config/Positron/User/keybindings.json
 ln -s ~/Documents/my-vscode-settings/settings.json ~/.config/Positron/User/settings.json
 ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/Positron/User/snippets/personal_snippets.code-snippets
-```
-
-```
-
 ```
 
 ## Bash
