@@ -66,3 +66,4 @@ ln -s ~/Documents/my-vscode-settings/personal_snippets.code-snippets ~/.config/P
 ## Bash
 
 Include the content of `bashrc_personalized.sh` into `bash.sh` in the correct spot.
+test
