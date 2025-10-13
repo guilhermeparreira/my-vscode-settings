@@ -8,6 +8,9 @@ style = "bold purple"
 
 # Git status
 [git_status]
+# Disabled the git_status module
+disabled = false
+ignore_submodules = false
 format = '([\[$all_status$ahead_behind\]]($style) )'
 style = "bold red"
 
@@ -22,9 +25,7 @@ modified = "!${count}"
 staged = "+${count}"
 renamed = "»${count}"
 deleted = "✘${count}"
-
-# Disabled (don't show these)
-disabled = false
+up_to_date = "≡"     # When synced with remote
 
 # Git state (rebase, merge, etc.)
 [git_state]

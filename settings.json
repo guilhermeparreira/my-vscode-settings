@@ -51,13 +51,12 @@
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": false,
-  "python.analysis.indexing": true, //it may make the code slow, so false
+  "python.analysis.indexing": true, //it may make the code slow
   "python.analysis.exclude": [ // this is pyright https://github.com/microsoft/pyright/blob/main/docs/configuration.md
     "**/site-packages/**",
     "**/__pycache__/**",
     "**/.venv/**"
   ],
-  "python.analysis.functionReturnTypes": false,
   "python.analysis.diagnosticSeverityOverrides": {
     "reportUnusedVariable": "warning",
     "reportUnusedImport": "warning",
@@ -100,14 +99,13 @@
   "interactiveWindow.executeWithShiftEnter": true,
   // Terminal
   "terminal.integrated.defaultProfile.linux": "bash", // Ou "zsh", "fish", conforme seu terminal padrão
-  // "terminal.integrated.splitCwd": "workspaceRoot",
   "terminal.integrated.inheritEnv": true,
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "/bin/bash"
     }
   },
-  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   // WorkBench
   "workbench.editorAssociations": {
     "*.copilotmd": "vscode.markdown.preview.editor",
@@ -183,7 +181,7 @@
     "**/data/10_model_output/**": true,
     // "!**/data/01_raw/**": true,  // ← Add this!
   },
-  // Exclude
+  // Exclude from search in ctrl+P
   "search.exclude": {
     "**/data/02_intermediate/**": true,
     "**/data/04_feature/**": true,
@@ -243,6 +241,29 @@
     "source.unusedImports": "always"
   },
   "editor.acceptSuggestionOnEnter": "on",
+  // # this is for toml files
+  "editor.tokenColorCustomizations": {
+      "textMateRules": [
+          {
+              "scope": "support.type.property-name.table",
+              "settings": {
+                  "foreground": "#4EC9B0",
+              },
+          },
+          {
+              "scope": "support.type.property-name.array",
+              "settings": {
+                  "foreground": "#569CD6",
+              }
+          },
+          {
+              "scope": "constant.other.time",
+              "settings": {
+                  "foreground": "#DCDCAA",
+              }
+          }
+      ]
+  },
   // Make sure JSON validation is enabled
   "json.validate.enable": true,
   "json.schemas": [],
@@ -274,6 +295,5 @@
   "markdown.preview.openMarkdownLinks": "inEditor",
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
-  "makefile.configureOnOpen": true,
   "jupyter.disableJupyterAutoStart": true, //performance
 }
