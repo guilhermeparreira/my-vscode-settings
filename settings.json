@@ -64,6 +64,8 @@
     "reportAssertAlwaysTrue": "warning",
   },
   "python.defaultInterpreterPath": "/bin/python3",
+  "python.analysis.logLevel":"Information",
+
   // Jupyter
   "[jupyter]": {
     "editor.defaultFormatter": "charliermarsh.ruff"

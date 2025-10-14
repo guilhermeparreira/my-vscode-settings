@@ -29,7 +29,7 @@ This will, if a change occurs in the file, you need to push to the repository an
 Don't forget to install [zoxide](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file).
 Then [fzf](https://github.com/junegunn/fzf) through homebrew.
 Then [nerdfont](https://www.nerdfonts.com/font-downloads) and [starship](https://starship.rs/).
-Then [eza](https://github.com/eza-community/eza). Apply setup:
+Then [eza](https://github.com/eza-community/eza), [bat](https://github.com/sharkdp/bat), [tldr](https://github.com/tldr-pages/tldr), [fd-find](https://github.com/sharkdp/fd), [btop](https://github.com/aristocratos/btop), [thefuck](https://github.com/nvbn/thefuck). Apply setup:
 
 ```sh
 alias ls='eza --color=always --icons=always --group-directories-first'
