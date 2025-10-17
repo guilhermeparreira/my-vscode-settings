@@ -50,5 +50,24 @@
 			"    json.dump(${2:data}, file, indent=${3:4}, ensure_ascii=False)"
 		],
 		"description": "Save a Python variable to a JSON file."
+	},
+
+	"Load PICKLE File": {
+		"prefix": "load_pickle",
+		"body": [
+			"import pickle",
+			"with open(${1:path_to_file}, 'rb', buffering=-1) as file:",
+			"    ${2:data} = pickle.load(file)"
+		],
+		"description": "Load a PICKLE file into a Python variable."
+	},
+	"Save PICKLE File": {
+		"prefix": "save_pickle",
+		"body": [
+			"import pickle",
+			"with open(${1:path_to_file}, 'wb') as file:",
+			"    pickle.dump(${2:data}, file)"
+		],
+		"description": "Save a Python variable to a PICKLE file."
 	}
 }

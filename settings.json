@@ -46,12 +46,18 @@
   "python.languageServer": "Pylance",
   "python.analysis.languageServerMode": "full",
   "python.analysis.typeCheckingMode": "standard",
-  "python.analysis.diagnosticMode": "workspace",
+  // Exclude all files from workspace, enabling IntelliSense support for open files only
+  "python.analysis.diagnosticMode": "openFilesOnly",
   "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": false,
+  "python.analysis.autoFormatStrings": true,
+  // Whether to enable code navigation for string literals that look like module names
+  "python.analysis.gotoDefinitionInStringLiteral": true,
   "python.analysis.indexing": true, //it may make the code slow
+  "python.analysis.autoSplitStrings": true,
+  "python.analysis.autoIndent": true,
   "python.analysis.exclude": [ // this is pyright https://github.com/microsoft/pyright/blob/main/docs/configuration.md
     "**/site-packages/**",
     "**/__pycache__/**",
@@ -63,9 +69,8 @@
     "reportDeprecated": "warning",
     "reportAssertAlwaysTrue": "warning",
   },
-  "python.defaultInterpreterPath": "/bin/python3",
-  "python.analysis.logLevel":"Information",
-
+  // It does debugging of Pylance
+  "python.analysis.logLevel": "Error",
   // Jupyter
   "[jupyter]": {
     "editor.defaultFormatter": "charliermarsh.ruff"
@@ -181,7 +186,6 @@
     "**/data/09_production/**": true,
     "**/data/09_save_experiments/**": true,
     "**/data/10_model_output/**": true,
-    // "!**/data/01_raw/**": true,  // ← Add this!
   },
   // Exclude from search in ctrl+P
   "search.exclude": {
@@ -194,7 +198,6 @@
     "**/data/09_production/**": true,
     "**/data/09_save_experiments/**": true,
     "**/data/10_model_output/**": true,
-    // "!**/data/01_raw/**": true,  // ← Add this!
     "**/figures/**": true,
     "**/.git/**": true
   },
@@ -202,10 +205,11 @@
   "telemetry.telemetryLevel": "off",
   "remote.autoForwardPorts": false,
   "remote.downloadExtensionsLocally": true,
-  "breadcrumbs.enabled": false, // this are the symbols below the final name that show the structure
+  "breadcrumbs.enabled": true, // this are the symbols below the final name that show the structure. In fact, it shows the path of the file
   // ==========================
   // QUALITY OF LIFE ----------
   // ==========================
+  "pasteAndIndent.selectAfter": true,
   "editor.codeLens": false, // for performance
   "editor.semanticHighlighting.enabled": true,
   "editor.semanticTokenColorCustomizations": {
@@ -245,26 +249,26 @@
   "editor.acceptSuggestionOnEnter": "on",
   // # this is for toml files
   "editor.tokenColorCustomizations": {
-      "textMateRules": [
-          {
-              "scope": "support.type.property-name.table",
-              "settings": {
-                  "foreground": "#4EC9B0",
-              },
-          },
-          {
-              "scope": "support.type.property-name.array",
-              "settings": {
-                  "foreground": "#569CD6",
-              }
-          },
-          {
-              "scope": "constant.other.time",
-              "settings": {
-                  "foreground": "#DCDCAA",
-              }
-          }
-      ]
+    "textMateRules": [
+      {
+        "scope": "support.type.property-name.table",
+        "settings": {
+          "foreground": "#4EC9B0",
+        },
+      },
+      {
+        "scope": "support.type.property-name.array",
+        "settings": {
+          "foreground": "#569CD6",
+        }
+      },
+      {
+        "scope": "constant.other.time",
+        "settings": {
+          "foreground": "#DCDCAA",
+        }
+      }
+    ]
   },
   // Make sure JSON validation is enabled
   "json.validate.enable": true,
