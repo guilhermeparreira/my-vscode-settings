@@ -241,6 +241,7 @@
     "source.unusedImports": "always"
   },
   "editor.acceptSuggestionOnEnter": "on",
+  "editor.snipp"
   // # this is for toml files
   "editor.tokenColorCustomizations": {
       "textMateRules": [
