@@ -4,44 +4,28 @@
   "explorer.confirmPasteNative": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  // ... Settings specific to R
+  // --------- R --------- //
+  "r.alwaysUseActiveTerminal": true,
+  "r.sessionWatcher": true,
+  "r.bracketedPaste": true,
+  "r.lsp.debug": true,
+  "r.lsp.diagnostics": true,
+  "r.plot.useHttpgd": true,
+  "r.source.focus": "editor",
+  "r.rterm.option": [],
   "[r]": {
-    // "editor.defaultFormatter": "REditorSupport.r",
-    // "editor.defaultFormatter": "Posit.air-vscode",
-    // https: //www.datanovia.com/books/r-in-vscode/introduction-to-r-programming-in-vscode.html
+    "editor.defaultFormatter": "REditorSupport.r",
     "editor.wordSeparators": "`~!@#%$^&*()-=+[{]}\\|;:'\",<>/?",
     "editor.codeActionsOnSave": {
       "source.fixAll.lintr": "always"
-    },
-    "r.lintr.enabled": true,
-    "r.term.option": "radian",
-    "rewrap.doubleSentenceSpacing": true,
-    "r.alwaysUseActiveTerminal": true,
-    "r.sessionWatcher": true,
-    "r.source.focus": "editor",
-    "r.bracketedPaste": true,
-    "r.rterm.linux": "/home/guilherme/miniconda3/envs/r-datasci-env/bin/Radian",
-    // "r.rterm.linux": "conda run -n r-datasci-env && radian",
-    "r.rpath.linux": "/home/guilherme/miniconda3/envs/r-datasci-env/bin/R",
-    "r.rterm.option": [],
-    "r.lsp.debug": true,
-    "r.lsp.diagnostics": true,
-    "r.plot.useHttpgd": true
+    }
   },
   "[rmd]": {
-    "editor.defaultFormatter": "REditorSupport.r",
-    "editor.formatOnSave": true
+    "editor.defaultFormatter": "REditorSupport.r"
   },
-  // (Optional) If you want to preview R Markdown (.Rmd) in-editor:
-  "files.associations": {
-    "*.Rmd": "rmd",
-    "*.rmd": "rmd",
-    "renv.lock": "json"
-  },
-  "quarto.path": "/usr/local/bin/quarto",
   // Python
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "python.languageServer": "Pylance",
   "python.analysis.languageServerMode": "full",
@@ -67,7 +51,7 @@
     "reportUnusedVariable": "warning",
     "reportUnusedImport": "warning",
     "reportDeprecated": "warning",
-    "reportAssertAlwaysTrue": "warning",
+    "reportAssertAlwaysTrue": "warning"
   },
   // It does debugging of Pylance
   "python.analysis.logLevel": "Error",
@@ -185,7 +169,7 @@
     "**/data/08_reporting/**": true,
     "**/data/09_production/**": true,
     "**/data/09_save_experiments/**": true,
-    "**/data/10_model_output/**": true,
+    "**/data/10_model_output/**": true
   },
   // Exclude from search in ctrl+P
   "search.exclude": {
@@ -247,7 +231,6 @@
     "source.unusedImports": "always"
   },
   "editor.acceptSuggestionOnEnter": "on",
-  "editor.snipp"
   // # this is for toml files
   "editor.tokenColorCustomizations": {
     "textMateRules": [
@@ -296,6 +279,13 @@
     "**/figures": true,
   },
   "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000, // 1000 means 1 second after stop typing
+  "files.autoSaveWhenNoErrors": false,
+  "files.associations": {
+    "*.Rmd": "rmd",
+    "*.rmd": "rmd",
+    "renv.lock": "json"
+  },
   // ==========================
   // Miscellanious
   // ==========================
