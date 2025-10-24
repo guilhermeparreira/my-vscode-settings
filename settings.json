@@ -32,7 +32,8 @@
   "python.analysis.typeCheckingMode": "standard",
   // Exclude all files from workspace, enabling IntelliSense support for open files only
   "python.analysis.diagnosticMode": "openFilesOnly",
-  "python.analysis.autoImportCompletions": true,
+  "python.analysis.autoImportCompletions": true, // This options competes with path-intellisense. Setting to false, all options in a string are shown in path-intellisense, but we lose the ability to autoimport a module in Python. So, I set it to true.
+  // Path Intellisense shouldn't trigger in imports (helps avoid overlap)
   "python.analysis.completeFunctionParens": true,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": false,
@@ -133,8 +134,9 @@
   "path-intellisense.autoSlashAfterDirectory": true,
   "path-intellisense.autoTriggerNextSuggestion": true,
   "path-intellisense.extensionOnImport": true,
-  "path-intellisense.showHiddenFiles": true,
+  "path-intellisense.showHiddenFiles": false,
   "path-intellisense.absolutePathToWorkspace": false,
+  // These are the built-in file suggestions from VsCode and may compete with Path Intellisense
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
   // ==========================
@@ -209,8 +211,8 @@
   "editor.fontSize": 14,
   "editor.quickSuggestions": {
     "other": true,
-    "comments": false, // to make more performatic
-    "strings": false // to make more performatic
+    "comments": true, // to make more performatic
+    "strings": true // to make more performatic
   },
   "editor.wordBasedSuggestions": "off", //turn it off for path-intellisense work
   "editor.inlineSuggest.enabled": true,
@@ -290,6 +292,7 @@
   // Miscellanious
   // ==========================
   "markdown.preview.openMarkdownLinks": "inEditor",
+  "markdown.extension.toc.updateOnSave": true,
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
   "jupyter.disableJupyterAutoStart": true, //performance
