@@ -1,0 +1,12 @@
+#!/bin/bash
+# post-merge hook: limpa branches locais já mescladas no main
+
+echo "🧹 Limpando branches locais já mescladas..."
+
+# Atualiza referências remotas e remove as deletadas
+git fetch -p
+
+# Deleta branches locais já mescladas em main (exceto main)
+git branch --merged main | grep -Ev "^(main|dev)$" | xargs git branch -d 2>/dev/null
+
+echo "✅ Branches limpas com sucesso."
