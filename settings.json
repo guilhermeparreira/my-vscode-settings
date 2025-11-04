@@ -66,6 +66,7 @@
   "notebook.lineNumbers": "on",
   "notebook.diff.ignoreMetadata": true,
   "notebook.diff.ignoreOutputs": true,
+  "notebook.diff.enablePreview": true,
   // Ruff
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
@@ -79,7 +80,6 @@
   "git.openRepositoryInParentFolders": "always",
   "git.ignoreLimitWarning": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   // ✨ Inline blame for quick context (who touched that line?)
   "gitlens.currentLine.enabled": false, // make code slow
   "gitlens.hovers.currentLine.over": "line",
@@ -104,7 +104,8 @@
     "*.csv": "default",
     "{git,gitlens}:/**/*.{md,csv,svg}": "default",
     "*.xlsx": "cweijan.officeViewer",
-    "*.md": "default"
+    "*.md": "default",
+    "*.ipynb": "jupyter-notebook"
   },
   "workbench.editor.empty.hint": "hidden",
   "workbench.editorLargeFileConfirmation": 100,
@@ -295,5 +296,5 @@
   "markdown.extension.toc.updateOnSave": true,
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
-  "jupyter.disableJupyterAutoStart": true, //performance
+  // "jupyter.disableJupyterAutoStart": true, //performance
 }
