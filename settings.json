@@ -72,7 +72,7 @@
   "ruff.organizeImports": true,
   // GIT
   "git.autorefresh": true,
-  "git.autofetch": false,
+  "git.autofetch": true,
   "git.autofetchPeriod": 300, // every 5 minutes
   "git.enableSmartCommit": true,
   "git.confirmSync": false,
