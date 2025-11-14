@@ -257,5 +257,15 @@
         "args": {
             "snippet": "```{r, results='asis'}\n$0\n```"
         }
+    },
+    {
+        "key": "ctrl+c",
+        "command": "filesExplorer.copy",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+v",
+        "command": "filesExplorer.paste",
+        "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
     }
 ]

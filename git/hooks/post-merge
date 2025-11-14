@@ -1,12 +1,9 @@
 #!/bin/bash
-# post-merge hook: limpa branches locais já mescladas no main
+# post-merge hook only runs when an actual merge commit happens in your local repo, so it runs on git pull when there is a change in the code 
 
-echo "🧹 Limpando branches locais já mescladas..."
+echo "🧹 Limpando branches locais já mescladas... NO POST-MERGE"
 
 # Atualiza referências remotas e remove as deletadas
-git fetch -p
+git fetch --prune
+git branch --merged dev | grep -Ev '^\s*(\*?\s*)?(dev|main|master)$' | xargs -r -n 1 git branch -d
 
-# Deleta branches locais já mescladas em main (exceto main)
-git branch --merged main | grep -Ev "^(main|dev)$" | xargs git branch -d 2>/dev/null
-
-echo "✅ Branches limpas com sucesso."
