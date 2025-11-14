@@ -25,7 +25,7 @@
   },
   // Python
   "[python]": {
-    "editor.defaultFormatter": "charliermarsh.ruff"
+    "editor.defaultFormatter": "charliermarsh.ruff",
   },
   "python.languageServer": "Pylance",
   "python.analysis.languageServerMode": "full",
@@ -88,6 +88,22 @@
   "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm",
   "gitlens.defaultDateStyle": "absolute",
   "cSpell.configFile": "~/Documents/my-vscode-settings/cspell.config.json",
+  "cSpell.enabled": true,
+  "cSpell.diagnosticLevel": "Hint",
+  "cSpell.ignorePaths": [
+    "package-lock.json",
+    "node_modules",
+    "vscode-extension",
+    ".git/{info,lfs,logs,refs,objects}/**",
+    ".git/{index,*refs,*HEAD}",
+    ".vscode",
+    ".vscode-insiders",
+    "**/*.ipynb",
+    "**/*.py",
+  ],
+  // "cSpell.useCustomDecorations": true,
+  // "cSpell.textDecoration": "underline way #fc9867 auto",
+  // "cSpell.patterns": [],
   "interactiveWindow.executeWithShiftEnter": true,
   // Terminal
   "terminal.integrated.defaultProfile.linux": "bash", // Ou "zsh", "fish", conforme seu terminal padrão
