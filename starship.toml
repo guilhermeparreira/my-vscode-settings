@@ -76,3 +76,7 @@ symbol = "🅒 "
 format = 'via [$symbol$environment]($style) '
 style = "bold green"
 ignore_base = false
+
+# R
+[rlang]
+format = 'with [📐 $version](blue bold) '
