@@ -79,4 +79,4 @@ ignore_base = false
 
 # R
 [rlang]
-format = 'with [📐 $version](blue bold) '
+format = 'with [🅡 $version](blue bold) '
