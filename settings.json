@@ -63,6 +63,7 @@
   "jupyter.interactiveWindow.creationMode": "perFile",
   "jupyter.askForKernelRestart": false,
   "jupyter.logging.level": "error",
+  "notebook.formatOnSave.enabled": true,
   "notebook.lineNumbers": "on",
   "notebook.diff.ignoreMetadata": true,
   "notebook.diff.ignoreOutputs": true,
