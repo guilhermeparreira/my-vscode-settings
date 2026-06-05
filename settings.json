@@ -299,7 +299,7 @@
     "**/.vscode": false,
     "**/figures": true,
   },
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "files.autoSaveDelay": 1000, // 1000 means 1 seconds after stop typing
   "files.autoSaveWhenNoErrors": false,
   "files.associations": {
@@ -316,5 +316,6 @@
   "keyboard.dispatch": "keyCode",
   "diffEditor.ignoreTrimWhitespace": false,
   "notebook.output.scrolling": true,
+  "remote.SSH.connectTimeout": 60,
   // "jupyter.disableJupyterAutoStart": true, //performance
 }
