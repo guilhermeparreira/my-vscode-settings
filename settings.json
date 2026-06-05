@@ -167,6 +167,7 @@
     "**/.sonar/**": true,
     "**/.devcontainer/**": true,
     "**/.github/**": true,
+    "**/anaconda3/**":true,
     //make faster vscode
     "**/public/**": true,
     "**/.git/**": true,
@@ -299,7 +300,7 @@
     "**/figures": true,
   },
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000, // 1000 means 1 second after stop typing
+  "files.autoSaveDelay": 1000, // 1000 means 1 seconds after stop typing
   "files.autoSaveWhenNoErrors": false,
   "files.associations": {
     "*.Rmd": "rmd",
@@ -313,5 +314,7 @@
   "markdown.extension.toc.updateOnSave": true,
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "notebook.output.scrolling": true,
   // "jupyter.disableJupyterAutoStart": true, //performance
 }
