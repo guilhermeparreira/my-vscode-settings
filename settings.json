@@ -167,7 +167,7 @@
     "**/.sonar/**": true,
     "**/.devcontainer/**": true,
     "**/.github/**": true,
-    "**/anaconda3/**":true,
+    "**/anaconda3/**": true,
     //make faster vscode
     "**/public/**": true,
     "**/.git/**": true,
@@ -300,7 +300,7 @@
     "**/figures": true,
   },
   "files.autoSave": "onFocusChange",
-  "files.autoSaveDelay": 1000, // 1000 means 1 seconds after stop typing
+  // "files.autoSaveDelay": 1000, // 1000 means 1 seconds after stop typing
   "files.autoSaveWhenNoErrors": false,
   "files.associations": {
     "*.Rmd": "rmd",
