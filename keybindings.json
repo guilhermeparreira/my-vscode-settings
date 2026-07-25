@@ -78,6 +78,12 @@
         "key": "ctrl+shift+r",
         "command": "jupyter.restartkernel"
     },
+    // Save select line in jupyter
+    {
+      "key": "ctrl+l",
+      "command": "expandLineSelection",
+      "when": "editorTextFocus && notebookEditorFocused"
+    },
     // to render quarto documents
     {
         "key": "ctrl+shift+k",

@@ -168,6 +168,7 @@
     "**/.sonar/**": true,
     "**/.devcontainer/**": true,
     "**/.github/**": true,
+    "**/anaconda3/**": true,
     //make faster vscode
     "**/public/**": true,
     "**/.git/**": true,
@@ -299,8 +300,8 @@
     "**/.vscode": false,
     "**/figures": true,
   },
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000, // 1000 means 1 second after stop typing
+  "files.autoSave": "onFocusChange",
+  // "files.autoSaveDelay": 1000, // 1000 means 1 seconds after stop typing
   "files.autoSaveWhenNoErrors": false,
   "files.associations": {
     "*.Rmd": "rmd",
@@ -318,5 +319,8 @@
     "*": true,
     "python": false
   },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "notebook.output.scrolling": true,
+  "remote.SSH.connectTimeout": 60,
   // "jupyter.disableJupyterAutoStart": true, //performance
 }
