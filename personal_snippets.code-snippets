@@ -19,7 +19,7 @@
 		"prefix": "load_yaml",
 		"body": [
 			"import yaml",
-			"with open(${1:path_to_file}, 'r') as file:",
+			"with open(${1:\"\"}, 'r') as file:",
 			"    ${2:ext_params} = yaml.safe_load(file, indent=4, ensure_ascii=False)"
 		],
 		"description": "Load a YAML file into a Python variable."
@@ -28,7 +28,7 @@
 		"prefix": "save_yaml",
 		"body": [
 			"import yaml",
-			"with open(${1:path_to_file}, 'w', encoding='utf-8') as file:",
+			"with open(${1:\"\"}, 'w', encoding='utf-8') as file:",
 			"    yaml.safe_dump(${2:data}, file, indent=4)"
 		],
 		"description": "Save a Python variable to a YAML file."
@@ -37,7 +37,7 @@
 		"prefix": "load_json",
 		"body": [
 			"import json",
-			"with open(${1:path_to_file}, 'r', encoding='utf-8') as file:",
+			"with open(${1:\"\"}, 'r', encoding='utf-8') as file:",
 			"    ${2:data} = json.load(file)"
 		],
 		"description": "Load a JSON file into a Python variable."
@@ -46,17 +46,16 @@
 		"prefix": "save_json",
 		"body": [
 			"import json",
-			"with open(${1:path_to_file}, 'w', encoding='utf-8') as file:",
+			"with open(${1:\"\"}, 'w', encoding='utf-8') as file:",
 			"    json.dump(${2:data}, file, indent=${3:4}, ensure_ascii=False)"
 		],
 		"description": "Save a Python variable to a JSON file."
 	},
-
 	"Load PICKLE File": {
 		"prefix": "load_pickle",
 		"body": [
 			"import pickle",
-			"with open(${1:path_to_file}, 'rb', buffering=-1) as file:",
+			"with open(${1:\"\"}, 'rb', buffering=-1) as file:",
 			"    ${2:data} = pickle.load(file)"
 		],
 		"description": "Load a PICKLE file into a Python variable."
@@ -65,7 +64,7 @@
 		"prefix": "save_pickle",
 		"body": [
 			"import pickle",
-			"with open(${1:path_to_file}, 'wb') as file:",
+			"with open(${1:\"\"}, 'wb') as file:",
 			"    pickle.dump(${2:data}, file)"
 		],
 		"description": "Save a Python variable to a PICKLE file."
