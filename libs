@@ -1,0 +1,2 @@
+% LDsfas
+sudo apt install libcurl4-openssl-dev libssl-dev libxml2-dev libssh2-1-dev libgit2-dev libxml2-dev libfontconfig1-dev libudunits2-dev libgsl-dev libcgal-dev libglu1-mesa-dev libsasl2-dev libz-dev pkg-config libudunits2-dev libgdal-dev -y 

@@ -122,7 +122,8 @@
     "{git,gitlens}:/**/*.{md,csv,svg}": "default",
     "*.xlsx": "cweijan.officeViewer",
     "*.md": "default",
-    "*.ipynb": "jupyter-notebook"
+    "*.ipynb": "jupyter-notebook",
+    "*.pdf": "pdf.preview"
   },
   "workbench.editor.empty.hint": "hidden",
   "workbench.editorLargeFileConfirmation": 100,
@@ -314,6 +315,10 @@
   "markdown.extension.toc.updateOnSave": true,
   "debug.onTaskErrors": "showErrors",
   "keyboard.dispatch": "keyCode",
+  "codeium.enableConfig": {
+    "*": true,
+    "python": false
+  },
   "diffEditor.ignoreTrimWhitespace": false,
   "notebook.output.scrolling": true,
   "remote.SSH.connectTimeout": 60,
