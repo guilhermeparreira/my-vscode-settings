@@ -41,6 +41,41 @@
   // Whether to enable code navigation for string literals that look like module names
   "python.analysis.gotoDefinitionInStringLiteral": true,
   "python.analysis.indexing": true, //it may make the code slow
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "sklearn",
+      "depth": 2
+    },
+    {
+      "name": "matplotlib",
+      "depth": 2
+    },
+    {
+      "name": "scipy",
+      "depth": 2
+    },
+    {
+      "name": "django",
+      "depth": 2
+    },
+    {
+      "name": "flask",
+      "depth": 2
+    },
+    {
+      "name": "fastapi",
+      "depth": 2
+    },
+    {
+      "name": "cuda",
+      "depth": 3,
+      "includeAllSymbols": true
+    },
+    {
+      "name": "pydantic",
+      "depth": 3
+    }
+  ],
   "python.analysis.autoSplitStrings": true,
   "python.analysis.autoIndent": true,
   "python.analysis.exclude": [ // this is pyright https://github.com/microsoft/pyright/blob/main/docs/configuration.md
@@ -71,6 +106,7 @@
   // Ruff
   "ruff.lint.enable": true,
   "ruff.organizeImports": true,
+  "ruff.lineLength": 88,
   // GIT
   "git.autorefresh": true,
   "git.autofetch": true,
@@ -129,7 +165,7 @@
   "workbench.editorLargeFileConfirmation": 100,
   "workbench.colorCustomizations": {},
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Modern",
+  "workbench.colorTheme": "Dark Modern",
   // Extension Project Manager
   "projectManager.git.baseFolders": [
     "/home/guilherme/Documents",
@@ -322,5 +358,8 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "notebook.output.scrolling": true,
   "remote.SSH.connectTimeout": 60,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
   // "jupyter.disableJupyterAutoStart": true, //performance
 }
